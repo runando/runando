@@ -27,7 +27,7 @@ namespace LeerXml
 				Console.WriteLine($"Error: {ex.Message}");
 			}
 		}
-
+ 
 		static void MostrarInformacion(XmlDocument xmlDoc)
 		{
 			// Obtener el nodo raíz
