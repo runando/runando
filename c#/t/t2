@@ -1,0 +1,13 @@
+Cuando creas un nuevo proyecto Blazor, las carpetas más importantes pueden variar según la plantilla específica que elijas (por ejemplo, Blazor Server o Blazor WebAssembly). A continuación, se mencionan algunas carpetas comunes que son fundamentales en la mayoría de los proyectos Blazor:
+
+1. **Pages:** Esta carpeta contiene las páginas de Blazor. Cada archivo .razor en esta carpeta define una página en tu aplicación. Las páginas en Blazor están compuestas por código C# y HTML, lo que permite la creación de interfaces de usuario interactivas.
+
+2. **wwwroot:** Esta carpeta se utiliza para almacenar archivos estáticos, como imágenes, archivos CSS, archivos JavaScript, etc. Todo lo que se almacene aquí estará disponible públicamente en la raíz del sitio web.
+
+3. **Shared:** Esta carpeta puede contener componentes de Blazor que son compartidos entre diferentes páginas. Los componentes compartidos son similares a las "vistas parciales" en otros marcos web y se utilizan para reutilizar la interfaz de usuario en varias ubicaciones.
+
+4. **Data:** En algunos proyectos, puedes encontrar una carpeta llamada "Data" que se utiliza para organizar las clases y lógica relacionadas con el manejo de datos. Puede contener, por ejemplo, servicios de acceso a datos, modelos de datos, etc.
+
+5. **wwwroot/css:** Si estás utilizando estilos CSS, estos suelen residir en la carpeta "wwwroot/css". Puedes organizar tus estilos aquí para que estén disponibles en la aplicación.
+
+6. **wwwroot/js:** De manera similar, si necesitas incluir scripts JavaScript en tu aplicación, puedes colocarlos en la carpeta "wwwroot/js". Estos scripts estarán disponibles para su uso en la aplicación Blazor.
