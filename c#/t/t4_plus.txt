@@ -1,0 +1,38 @@
+XML (Extensible Markup Language) es un lenguaje de marcado que se utiliza para almacenar y organizar datos de manera jerárquica. Las directivas XML son instrucciones especiales que se utilizan para definir la estructura y comportamiento del documento XML. 
+Aquí tienes información sobre algunas de las directivas XML más comunes:
+
+1. **<?xml version="1.0" encoding="UTF-8"?>:**
+   Esta es la declaración XML que se coloca al principio del documento para indicar la versión de XML que se está utilizando y la codificación de caracteres. Por ejemplo, `version="1.0"` especifica que el documento sigue la especificación XML 1.0, y `encoding="UTF-8"` indica que se está utilizando la codificación de caracteres UTF-8.
+
+2. **<!DOCTYPE>:**
+   La directiva DOCTYPE se utiliza para definir la estructura y el tipo de documento. Puede apuntar a un archivo de definición de tipo de documento (DTD) o a un esquema XML que describe la estructura del documento.
+
+   Ejemplo de uso:
+   ```xml
+   <!DOCTYPE rootElement SYSTEM "example.dtd">
+   ```
+
+3. **<!-- ... -->:**
+   Los comentarios se insertan en el código XML usando la sintaxis `<!-- comentario -->`. Los comentarios son útiles para agregar notas explicativas que no se procesan como datos XML.
+
+   Ejemplo:
+   ```xml
+   <!-- Este es un comentario en XML -->
+   ```
+
+4. **<![CDATA[...]]>:**
+   La sección CDATA (Character Data) se utiliza para incluir bloques de datos de caracteres sin procesar en un documento XML. Los datos dentro de una sección CDATA no son interpretados como elementos XML.
+
+   Ejemplo:
+   ```xml
+   <description><![CDATA[Este es un bloque de datos sin procesar.]]></description>
+   ```
+
+5. **<? ... ?>:**
+   Las instrucciones de procesamiento proporcionan información adicional para el procesador XML. Pueden usarse para indicar transformaciones, hojas de estilo, etc.
+
+   Ejemplo:
+   ```xml
+   <?xml-stylesheet type="text/xsl" href="estilo.xsl"?>
+   ```
+
