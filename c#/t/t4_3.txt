@@ -1,0 +1,95 @@
+Trabajar con XML en C# implica varias tareas, como leer, escribir y manipular documentos XML. Aquí te proporcionaré una breve teoría junto con algunos ejemplos prácticos.
+
+### 1. **Lectura de XML con `System.Xml`**
+
+El espacio de nombres `System.Xml` en C# proporciona clases para trabajar con XML. `XmlDocument` es una de las clases clave para leer documentos XML. Aquí hay un ejemplo básico:
+
+```csharp
+using System;
+using System.Xml;
+
+class Program
+{
+    static void Main()
+    {
+        // Crear una instancia de XmlDocument
+        XmlDocument xmlDoc = new XmlDocument();
+
+        // Cargar el documento XML desde un archivo
+        xmlDoc.Load("archivo.xml");
+
+        // Acceder a elementos y atributos
+        XmlNode nodo = xmlDoc.SelectSingleNode("/root/elemento");
+        string valor = nodo.InnerText;
+
+        Console.WriteLine("Valor del elemento: " + valor);
+    }
+}
+```
+
+### 2. **Escritura de XML con `System.Xml`**
+
+Puedes usar `XmlTextWriter` para escribir documentos XML. Aquí tienes un ejemplo:
+
+```csharp
+using System;
+using System.Xml;
+
+class Program
+{
+    static void Main()
+    {
+        // Crear una instancia de XmlTextWriter
+        XmlTextWriter writer = new XmlTextWriter("nuevoArchivo.xml", null);
+        writer.Formatting = Formatting.Indented;
+
+        // Escribir el encabezado del documento XML
+        writer.WriteStartDocument();
+
+        // Escribir elementos y atributos
+        writer.WriteStartElement("root");
+        writer.WriteElementString("elemento", "valor");
+        writer.WriteEndElement();
+
+        // Finalizar la escritura y cerrar el escritor
+        writer.WriteEndDocument();
+        writer.Close();
+
+        Console.WriteLine("Documento XML creado con éxito.");
+    }
+}
+```
+
+### 3. **Lectura y Escritura de XML con `System.Xml.Linq`**
+
+`System.Xml.Linq` proporciona una interfaz más moderna y fácil de usar para trabajar con XML. Aquí hay un ejemplo que demuestra la lectura y escritura de XML con `XDocument`:
+
+```csharp
+using System;
+using System.Xml.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        // Crear un documento XML
+        XDocument xmlDoc = new XDocument(
+            new XElement("root",
+                new XElement("elemento", "valor")
+            )
+        );
+
+        // Guardar el documento XML en un archivo
+        xmlDoc.Save("nuevoArchivo.xml");
+
+        // Cargar un documento XML existente
+        XDocument loadedXmlDoc = XDocument.Load("archivo.xml");
+
+        // Acceder a elementos y atributos
+        XElement element = loadedXmlDoc.Element("root").Element("elemento");
+        string value = element.Value;
+
+        Console.WriteLine("Valor del elemento: " + value);
+    }
+}
+```
