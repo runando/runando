@@ -1,28 +1,29 @@
-**#LA FIRMA ELECTRÓNICA**
+#**LA FIRMA ELECTRÓNICA**
+LA FIRMA ELECTRÓNICA
 
-##DEFINICIÓN
+DEFINICIÓN
 La firma electrónica es un conjunto de datos electrónicos que asociados a un documento electrónico y cuyas funciones básicas son:
 •	Identificar de forma inequívoca al firmante.
 •	Asegurar la integridad del documento electrónico.
 •	Asegurar el no repudio del documento electrónico.
 
-##EL CERTIFICADO ELECTRÓNICO
+EL CERTIFICADO ELECTRÓNICO
 Para firmar un documento electrónico es necesario disponer de un certificado digital o de un DNI electrónico.
 El certificado electrónico es un documento expedido por una Autoridad de Certificación e identifica a una persona(física o jurídica) con un par de claves.
 Tiene como función validar y certificar que una firma electrónica se corresponde con un persona o entidad concreta
 Contiene la información necesaria para firmar electrónicamente e identificar a su propietario con sus datos: nombre, NIF, algoritmo y claves de firma, fecha de expedición y organismo que lo expide.
 La autoridad de Certificación da fe de que la firma electrónica se corresponde con un usuario concreto.
 
-##LAS CLAVES DIGITALES
+LAS CLAVES DIGITALES
 En un certificado, las claves digitales son los elementos esenciales para la firma e identificación del firmante. Existen dos claves, la clave privada y la clave pública, y trabajan complementariamente. Lo que cifra o codifica una clave sólo puede descifrar o decodificar la otra.
 La diferencia entre ellas es que la clave privada esta pensada para que nunca salga del certificado y este siempre bajo el control del firmante, en cambio la clave pública se puede repartir o enviar a otros usuarios.
 En ocasiones se habla de certificado privado para referirse al certificado que contiene la clave pública y la privada y del Certificado público para referirse al certificado que sólo contiene la clave pública
 
-##RENOVACIÓN DEL CERTIFICADO
+RENOVACIÓN DEL CERTIFICADO
 Los certificados electrónicos tiene  un periodo de validez de 36 meses y se puede renovar dos meses antes.
 Si el certificado caduca es necesario volver a realizar el proceso de solicitud, sin embargo si se realiza la renovación antes de que caduque no es necesaria la solicitud nueva.
 
-##EL PROCESO BÁSICO DE FIRMA ELECTRÓNICA
+EL PROCESO BÁSICO DE FIRMA ELECTRÓNICA
 Los pasos son los siguientes:
 •	El usuario dispone de un documento electrónico y de un certificado digital que le pertenece y le identifica
 •	La aplicación o dispositivo digital utilizados para la firma realiza un resumen del documento. El resumen de un documento de gran tamaño puede llegar a ser tan solo de unas pocas líneas. Cualquier modificación del documento implica también una modificación del resumen
@@ -30,7 +31,7 @@ Los pasos son los siguientes:
 •	La aplicación crea otro documento electrónico que contiene ese resumen codificado, ese nuevo documento es la firma electrónica.
 El resultado de todo este proceso es un documento electrónico obtenido a partir del documento original y de las claves del firmante, la firma electrónica, por tanto, es el mismo documento electrónico resultante.
 
-##FORMATOS DE FIRMA
+FORMATOS DE FIRMA
 EL formato de la firma es la forma como se genera el documento de firma y como se guarda o estructura la información de firma en el documento generado.
 Un fichero de firma tiene un formato que viene determinado por:
 •	Estructura del fichero: formatos CadES, XadES, PadES, OOXML, ODF,…
@@ -72,7 +73,7 @@ El sello de tiempo es una firma de autoridad de sellado de tiempo(TSA) que actua
 El sellado de tiempo proporciona un valor añadido a la utilización de firma digital, ya que la firma por si sola no proporciona ninguna informacion acerca del momento de creación de la firma, y en el caso de que el firmante la incluyese, esta habria sido proporcionada por una de las partes, cuando lo recomendable es que la marca de tiempo sea proporcionada por una tercera parte de confianza.
 ◦	Resellado, puesto que el sello de tiepo es una firma realizada con el certificado electrónico de la autoridad de sellado, cuando ese certificado caduca, el sello  y por tanto la firma dejan de ser válidas. Por eso, antes de que el certificado de la TSA caduque es necesario resellar o aplicar de nuevo el sello temporal para mantener la validez temporal de la firma.
 
-##LAS APLICACIONES DE FIRMA
+LAS APLICACIONES DE FIRMA
 Las aplicaciones de Firma son los programas que permiten firmar un documento electrónico.
 Existen algunos programas, Adobe Acrobat, Microsoft Word, que permiten firmar el mismo documento que se genera, pero tiene dos inconvenientes:
 •	No todos los programas que generan documentos son capaces también de firmarlos
@@ -84,18 +85,18 @@ Las herramientas o aplicaciones especificas de firma electrónica son capaces de
 ◦	Generación de firmas electrónicas en múltiples formatos
 ◦	Visualización de firmas con la ayuda del Visor.
 
-##VISOR DE FIRMAS ELECTRÓNICAS
+VISOR DE FIRMAS ELECTRÓNICAS
 El visor es una herramienta que permite generar un informe de la firma y ver información de la propia firma electrónica y del documento firmado.
 El documento que se genera no tiene el miso valor legal que la firma. De hecho puede ser válido en los términos que se determine para su uso. En general, en este caso, el documento impreso deberá contener un CSV o Código de Verificación que permite contrastar la copia impresa con la original electrónica.
 
-##UTILIDAD PRÁCTICA TIENE LA FIRMA ELECTRÓNICA
+UTILIDAD PRÁCTICA TIENE LA FIRMA ELECTRÓNICA
 Tiene muchas aplicaciones, como:
 •	Realización de la Renta a través de Internet
 •	Solicitudes en registros administrativos
 •	Petición vida laboral
 •	etc,...
 
-##CÓMO VERIFICAR UN DOCUMENTO FIRMADO
+CÓMO VERIFICAR UN DOCUMENTO FIRMADO
 La validación de una firma electrónica es el proceso por el que se comprueba:
 •	La identidad del firmante
 •	La integridad del documento firmado
@@ -103,6 +104,3 @@ La validación de una firma electrónica es el proceso por el que se comprueba:
 El proceso de validación de la firma no puede separarse del proceso de validación del certificado usado para la firma, y por eso la validación de la firma implica también la validación del certificado
 El certificado electrónico solamente se puede validar mientras este activo, una vez caducado no se puede comprobar su estado. Si el certificado no es válido, esta caducado o revocado, la firma no puede ser validada correctamente
 Necesitamos una conexión a internet para acceder a la plataforma de validación de certificados.
-
-
-
