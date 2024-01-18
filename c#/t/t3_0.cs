@@ -1,3 +1,4 @@
+//busca las ocurrencias de una etiqueta en un xml dado.
 using System;
 using System.Xml;
 
