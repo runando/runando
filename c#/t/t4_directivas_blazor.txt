@@ -1,0 +1,182 @@
+Blazor es un marco (framework) de desarrollo web de Microsoft que permite construir aplicaciones web interactivas utilizando C# y .NET en el lado del cliente. 
+Aunque Blazor utiliza C#, las directivas específicas de Blazor son diferentes de las directivas estándar de C#. Algunas de las directivas importantes en Blazor son:
+
+1. **@page:** Esta directiva se utiliza en los componentes de Blazor para especificar la ruta de la página asociada al componente. Define la URL relativa a la cual se puede acceder al componente.
+
+   ```csharp
+   @page "/mi-ruta"
+   ```
+
+2. **@inject:** Se utiliza para la inyección de dependencias en componentes de Blazor. Permite agregar servicios y otros objetos al componente.
+
+   ```csharp
+   @inject IMyService MyService
+   ```
+
+3. **@using:** Similar a la directiva `using` de C#, pero se utiliza en archivos `.razor` para importar espacios de nombres específicos para su uso en ese componente.
+
+   ```csharp
+   @using MiEspacioDeNombres
+   ```
+
+4. **@inherits:** Se utiliza para especificar la clase base de la cual el componente hereda. Puede ser útil para la herencia de componentes.
+
+   ```csharp
+   @inherits MyBaseComponent
+   ```
+
+5. **@code:** Esta directiva se utiliza para definir bloques de código C# directamente dentro de un archivo `.razor`. Es especialmente útil para definir lógica y variables en la parte de código del componente.
+
+   ```csharp
+   @code {
+       // Código C# aquí
+   }
+   ```
+
+6. **@key:** Se utiliza para especificar una clave única para un elemento en una colección. Es útil cuando estás trabajando con listas y necesitas identificar elementos de manera única.
+
+   ```csharp
+   @key = "miClaveUnica"
+   ```
+7. La directiva `@bind` en Blazor se utiliza para establecer un enlace bidireccional entre un elemento de la interfaz de usuario (UI) y una propiedad en el componente. Esto permite que los cambios en la UI se reflejen automáticamente en la propiedad y viceversa. `@bind` es comúnmente utilizado en controles de entrada, como cajas de texto (`<input type="text">`), para mantener sincronizados los datos entre el componente y la interfaz de usuario.
+
+Aquí hay un ejemplo básico de cómo se utiliza `@bind` en una caja de texto:
+
+```csharp
+<input type="text" @bind="miVariable" />
+```
+
+En este caso, `miVariable` es una propiedad definida en el componente de Blazor. La directiva `@bind` crea un enlace bidireccional entre el valor de la caja de texto y la propiedad `miVariable`. Si el usuario escribe algo en la caja de texto, el valor de `miVariable` se actualiza automáticamente. Del mismo modo, si el valor de `miVariable` cambia en el componente, la caja de texto se actualiza para reflejar ese cambio.
+
+También puedes utilizar `@bind` con otros elementos de la interfaz de usuario, como selectores o controles personalizados. Por ejemplo, con un selector (`<select>`):
+
+```csharp
+<select @bind="opcionSeleccionada">
+    <option value="opcion1">Opción 1</option>
+    <option value="opcion2">Opción 2</option>
+    <option value="opcion3">Opción 3</option>
+</select>
+```
+
+En este caso, `opcionSeleccionada` es una propiedad en el componente que se actualiza automáticamente según la opción seleccionada por el usuario en el elemento `select`.
+
+El uso de `@bind` simplifica la gestión de datos en Blazor al proporcionar una forma fácil y conveniente de mantener sincronizados los datos entre la interfaz de usuario y el componente.
+
+Mis disculpas por la confusión anterior. Las directivas mencionadas anteriormente son algunas de las más comunes en Blazor, pero hay otras directivas específicas de Blazor que son importantes. Aquí hay algunas más:
+
+8. **@inherits:** Aunque mencioné esta directiva anteriormente, vale la pena destacarla nuevamente. Se utiliza para especificar la clase base para un componente de Blazor. 
+
+   ```csharp
+   @inherits MyBaseComponent
+   ```
+
+9. **@layout:** Esta directiva se utiliza para especificar el diseño (layout) que debe ser utilizado para renderizar el componente actual. Permite definir la estructura común de varias páginas.
+
+   ```csharp
+   @layout MiLayout
+   ```
+
+10. **@pageRoute:** Esta directiva se utiliza para especificar una ruta adicional para una página. Esto es útil cuando deseas que una página sea accesible desde varias rutas.
+
+   ```csharp
+   @page "/mi-pagina"
+   @page "/otra-ruta"
+   ```
+
+11. **@inject:** Aunque ya se mencionó, vale la pena enfatizar que `@inject` no solo se usa para la inyección de dependencias, sino que también se utiliza para la inyección de servicios específicos en componentes.
+
+   ```csharp
+   @inject IMyService MyService
+   ```
+
+12. **@typeparam:** Se utiliza para especificar parámetros de tipo genérico para componentes de Blazor que utilizan tipos genéricos.
+
+   ```csharp
+   @typeparam TItem
+   ```
+
+13. **@ref:** Esta directiva se utiliza para crear una referencia a un elemento del DOM, permitiendo interactuar con él en el código del componente.
+
+   ```csharp
+   <input @ref="miInput" />
+   ```
+
+14. **@on[event]:** Se utiliza para manejar eventos en la interfaz de usuario. Por ejemplo, `@onclick` se utiliza para manejar el evento de clic.
+
+   ```csharp
+   <button @onclick="HandleClick">Clic aquí</button>
+   ```
+
+##En resumen:
+A continuación, te proporciono una lista de las directivas más comunes en Blazor, incluida la mencionada `@bind`, así como algunas otras que no se han discutido anteriormente:
+
+1. **@code:** Se utiliza para incluir bloques de código C# en un archivo `.razor`. 
+
+   ```csharp
+   @code {
+       // Código C# aquí
+   }
+   ```
+
+2. **@inherits:** Especifica la clase base para un componente.
+
+   ```csharp
+   @inherits MyBaseComponent
+   ```
+
+3. **@layout:** Especifica el diseño que debe ser utilizado para renderizar el componente actual.
+
+   ```csharp
+   @layout MyLayout
+   ```
+
+4. **@page:** Especifica la ruta de la página asociada al componente.
+
+   ```csharp
+   @page "/mi-ruta"
+   ```
+
+5. **@pageRoute:** Especifica rutas adicionales para una página.
+
+   ```csharp
+   @page "/mi-pagina"
+   @page "/otra-ruta"
+   ```
+
+6. **@inject:** Se utiliza para la inyección de dependencias.
+
+   ```csharp
+   @inject IMyService MyService
+   ```
+
+7. **@using:** Importa espacios de nombres para su uso en un componente.
+
+   ```csharp
+   @using MiEspacioDeNombres
+   ```
+
+8. **@typeparam:** Especifica parámetros de tipo genérico para componentes que utilizan tipos genéricos.
+
+   ```csharp
+   @typeparam TItem
+   ```
+
+9. **@ref:** Crea una referencia a un elemento del DOM para interactuar con él en el código del componente.
+
+   ```csharp
+   <input @ref="miInput" />
+   ```
+
+10. **@bind:** Establece un enlace bidireccional entre un elemento de la interfaz de usuario y una propiedad en el componente.
+
+    ```csharp
+    <input type="text" @bind="miVariable" />
+    ```
+
+11. **@on[event]:** Maneja eventos en la interfaz de usuario.
+
+    ```csharp
+    <button @onclick="HandleClick">Clic aquí</button>
+    ```
+
+Estas son solo algunas de las directivas específicas de Blazor. Blazor tiene otras directivas y características que facilitan el desarrollo de aplicaciones web utilizando el lenguaje C# y .NET en el lado del cliente. Estas directivas son específicas de Blazor y no se encuentran en C# estándar.
