@@ -1,0 +1,42 @@
+Blazor es un marco (framework) de desarrollo web de Microsoft que permite construir aplicaciones web interactivas utilizando C# y .NET en el lado del cliente. 
+Aunque Blazor utiliza C#, las directivas específicas de Blazor son diferentes de las directivas estándar de C#. Algunas de las directivas importantes en Blazor son:
+
+1. **@page:** Esta directiva se utiliza en los componentes de Blazor para especificar la ruta de la página asociada al componente. Define la URL relativa a la cual se puede acceder al componente.
+
+   ```csharp
+   @page "/mi-ruta"
+   ```
+
+2. **@inject:** Se utiliza para la inyección de dependencias en componentes de Blazor. Permite agregar servicios y otros objetos al componente.
+
+   ```csharp
+   @inject IMyService MyService
+   ```
+
+3. **@using:** Similar a la directiva `using` de C#, pero se utiliza en archivos `.razor` para importar espacios de nombres específicos para su uso en ese componente.
+
+   ```csharp
+   @using MiEspacioDeNombres
+   ```
+
+4. **@inherits:** Se utiliza para especificar la clase base de la cual el componente hereda. Puede ser útil para la herencia de componentes.
+
+   ```csharp
+   @inherits MyBaseComponent
+   ```
+
+5. **@code:** Esta directiva se utiliza para definir bloques de código C# directamente dentro de un archivo `.razor`. Es especialmente útil para definir lógica y variables en la parte de código del componente.
+
+   ```csharp
+   @code {
+       // Código C# aquí
+   }
+   ```
+
+6. **@key:** Se utiliza para especificar una clave única para un elemento en una colección. Es útil cuando estás trabajando con listas y necesitas identificar elementos de manera única.
+
+   ```csharp
+   @key = "miClaveUnica"
+   ```
+
+Estas son solo algunas de las directivas específicas de Blazor. Blazor tiene otras directivas y características que facilitan el desarrollo de aplicaciones web utilizando el lenguaje C# y .NET en el lado del cliente. Estas directivas son específicas de Blazor y no se encuentran en C# estándar.
