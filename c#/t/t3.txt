@@ -1,0 +1,49 @@
+Las directivas en C# son instrucciones que proporcionan información al compilador sobre cómo procesar el código fuente. Estas directivas no son ejecutadas, pero afectan la compilación y el comportamiento del programa. Aquí hay algunas de las directivas más comunes en C#:
+
+1. **using:** La directiva `using` se utiliza para importar espacios de nombres (namespaces). Esto permite que el código haga referencia a tipos definidos en esos espacios de nombres sin tener que usar el nombre completo cada vez.
+
+   ```csharp
+   using System;
+   ```
+
+2. **namespace:** La directiva `namespace` se utiliza para declarar un espacio de nombres, que es una forma de organizar y agrupar tipos relacionados.
+
+   ```csharp
+   namespace MiProyecto {
+       // Código aquí
+   }
+   ```
+
+3. **assembly:** La directiva `assembly` se utiliza para especificar atributos de ensamblado, como el nombre del ensamblado, su versión, cultura, etc.
+
+   ```csharp
+   [assembly: AssemblyTitle("MiAplicacion")]
+   [assembly: AssemblyVersion("1.0.0.0")]
+   ```
+
+4. **region:** La directiva `region` se utiliza para agrupar secciones de código en bloques colapsables. Es útil para mejorar la legibilidad y la organización del código.
+
+   ```csharp
+   #region MisMetodos
+   // Código aquí
+   #endregion
+   ```
+
+5. **define, undef, ifdef, ifndef, else, elif, endif:** Estas directivas se utilizan para condicionalmente incluir o excluir bloques de código durante la compilación en función de si se ha definido un símbolo.
+
+   ```csharp
+   #define DEBUG
+   #if DEBUG
+       // Código de depuración aquí
+   #else
+       // Código para la versión de lanzamiento aquí
+   #endif
+   ```
+
+6. **nullable:** La directiva `nullable` se utiliza para habilitar o deshabilitar el tratamiento especial de los tipos de valor nullable.
+
+   ```csharp
+   #nullable enable
+   ```
+
+Estas son solo algunas de las directivas disponibles en C#. Cada una de ellas tiene un propósito específico y puede ser utilizada para modificar el comportamiento del compilador o para proporcionar información adicional sobre el código fuente.
