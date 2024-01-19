@@ -1,0 +1,8 @@
+C:\Users\wowfu\source\repos\TestC\TestC\obj\Debug\TestC.csproj.AssemblyReference.cache
+C:\Users\wowfu\source\repos\TestC\TestC\obj\Debug\TestC.csproj.CoreCompileInputs.cache
+C:\Users\wowfu\source\repos\TestC\TestC\bin\Debug\TestC.exe.config
+C:\Users\wowfu\source\repos\TestC\TestC\bin\Debug\TestC.exe
+C:\Users\wowfu\source\repos\TestC\TestC\bin\Debug\TestC.pdb
+C:\Users\wowfu\source\repos\TestC\TestC\obj\Debug\TestC.exe
+C:\Users\wowfu\source\repos\TestC\TestC\obj\Debug\TestC.pdb
+C:\Users\wowfu\source\repos\TestC\TestC\bin\Debug\datos.xml

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<datos>
+	<persona>
+		<nombre>John Doe</nombre>
+		<edad>30</edad>
+		<ciudad>New York</ciudad>
+	</persona>
+	<persona>
+		<nombre>Jane Smith</nombre>
+		<edad>25</edad>
+		<ciudad>Los Angeles</ciudad>
+	</persona>
+	<libro>
+		<titulo>La Aventura</titulo>
+		<autor>Author X</autor>
+		<publicacion>Año 2022</publicacion>
+	</libro>
+	<libro>
+		<titulo>El Descubrimiento</titulo>
+		<autor>Author Y</autor>
+		<publicacion>Año 2021</publicacion>
+	</libro>
+</datos>
