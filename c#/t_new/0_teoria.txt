@@ -1,0 +1,50 @@
+DIRECTIVAS DE BLAZOR
+	Las directivas son macros integrados que alteran el código c# transpilado que se genera a partir del marcado razor. Las directivas se utilizan precediendo el identificador con el s@simbolo, siendo el identificador lo que normalmente esperaríamos que fuera el nombre de un atributo HTML o el nombre de la propiedad de un componente.
+Blazor no permite crear a los desarrolladores sus propias directivas.
+Algunas de las directivas estándar son:
+• @code - identifica un bloque de código c#
+• @page – genera una ruta de la pagina asociada al componente
+• @layout – determina el diseño de la pagina
+• @typeparam – indica una clase genérica
+• @inject – define las dependencia que se deben inyectar
+• @attribute – agrega el atributo DotNet especificado a la clase c# generada
+• @ref – identifica una referencia a un miembro o una propiedad del componente
+• @bind – especifica un enlace bidireccional entre la interfaz de usuario y una propiedad del componente
+• @key – da la posibilidad de dar a los elementos un identificador único
+• @on[event] – manejo de eventos de usuario
+            @using para importar espacios de nombres específicos para su uso en ese componente
+            @inherits Se utiliza para especificar la clase base de la cual el componente hereda. Puede ser útil para la herencia de componentes.
+
+HOSPEDAJE DE BLAZOR
+
+Las aplicaciones Blazor se pueden hospedar de dos maneras:
+• en el lado cliente en el explorador en WebAssembly
+• en el lado servidor en una aplicación ASP.NET Core
+
+Aplicaciones de BlazorWebAssembly
+Se ejecutan directamente en el navegador, es decir, del lado del cliente. Es un entorno de ejecución de .NET basado en WebAssembly. El entorno de ejecución de .NET se descarga con la aplicación junto con el ensamblado de la aplicación y las dependencias necesarias. No se necesitan complementos ni extensiones del explorador.
+No funciona en navegadores antiguos
+
+Aplicaciones Blazor Server
+Los componentes se ejecutan en el servidor. Los eventos de interfaz de usuario que se producen en el explorador se envían al servidor por medio de una conexión en tiempo real, por lo tanto se necesita una conexión activa con el cliente, y todo el estado de la interfaz de usuario se mantiene en el servidor.
+Funciona en navagadores antiguos.
+
+COMPONENTES BLAZOR. CARACTERISTICAS DEL TIPO DE ARCHIVO DE BLAZOR
+Blazor es un marco de desarrollo web de Microsoft que permite crear aplicaciones web interactivas utilizando C# y .NET en lugar de JavaScript. En el contexto de Blazor, un archivo típico puede tener las siguientes características:
+
+1. *Extensión de archivo:* Los archivos de código en Blazor suelen tener extensiones como .razor para componentes Blazor o .cshtml para páginas Razor.
+
+2. *Componentes:* Los archivos Blazor contienen componentes que son bloques de construcción reutilizables para la interfaz de usuario. Estos componentes pueden incluir marcado HTML y código C#.
+
+3. *Directivas:* Pueden contener directivas como @page para especificar la ruta de una página, @inject para inyectar dependencias, o @using para importar namespaces.
+
+4. *Código C#:* Blazor permite la mezcla de código C# directamente en el archivo, lo que facilita la manipulación de la lógica del lado del servidor y del cliente.
+
+5. *Interpolación:* Se pueden usar expresiones C# dentro del marcado HTML mediante la interpolación @.
+
+6. *Eventos:* Los archivos Blazor manejan eventos de usuario y del sistema, como clics o cambios de estado, mediante métodos C#.
+
+7. *Rutas y navegación:* Para aplicaciones de una sola página (SPA), los archivos Blazor pueden definir rutas y gestionar la navegación entre páginas.
+
+Recuerda que estas son características generales y la estructura exacta puede variar según el tipo de archivo y la arquitectura de tu aplicación Blazor.
+ 

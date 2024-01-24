@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "6PB62YKjciN84ebtYapMYQCba74/FD0kw7z3O2F9mcE=",
+  "Source": "Example",
+  "BasePath": "_content/Example",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Example\\wwwroot",
+      "Source": "Example",
+      "ContentRoot": "C:\\Users\\wowfu\\source\\repos\\Example\\Example\\wwwroot\\",
+      "BasePath": "_content/Example",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\wowfu\\source\\repos\\Example\\Example\\wwwroot\\css\\site.css",
+      "SourceId": "Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wowfu\\source\\repos\\Example\\Example\\wwwroot\\",
+      "BasePath": "_content/Example",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    }
+  ]
+}

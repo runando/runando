@@ -1,0 +1,35 @@
+Pseudocodigo
+
+Inicio
+
+Página actual: "/"
+Usar System.Xml
+
+Mostrar "Contador de Etiquetas XML"
+
+Inicio de contenedor
+    Mostrar "Ruta del archivo XML:"
+    Entrada de datos enlazada a "rutaArchivo"
+    Mostrar botón llamado "ContarOcurrencias"
+    Mostrar "El número de ocurrencias de la etiqueta "@etiquetaBuscada" es: @resultado"
+Fin de contenedor
+
+Código:
+    Definir variable rutaArchivo
+    Definir variable etiquetaBuscada = "ejemplo"
+    Definir variable resultado = 0
+
+    Función ContarOcurrencias:
+        Intentar
+            Crear nuevo objeto XmlDocument
+            Cargar el documento XML desde "rutaArchivo"
+            Asignar a resultado el número de nodos seleccionados usando la expresión $"//{etiquetaBuscada}"
+        Capturar excepción ex
+            Mostrar mensaje de error: "Error: " seguido del mensaje de la excepción
+            Asignar a resultado el valor nulo
+
+Fin
+
+Codigo
+
+
