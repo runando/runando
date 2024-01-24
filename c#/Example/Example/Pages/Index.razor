@@ -1,0 +1,31 @@
+﻿@page "/"
+@using System.Xml;
+
+<h3>Contador de Etiquetas XML</h3>
+
+<div>
+    <label>Ruta del archivo XML:</label>
+    <input @bind="rutaArchivo" />
+    <button @onclick="ContarOcurrencias">Contar Ocurrencias</button>
+    <p>El número de ocurrencias de la etiqueta "@etiquetaBuscada" es: @resultado</p>
+ </div>
+@code {
+    private string rutaArchivo;
+    private string etiquetaBuscada = "ejemplo"; // Reemplaza con la etiqueta que deseas contar
+    private int? resultado=0;
+
+    private void ContarOcurrencias()
+    {
+        try
+        {
+            var xmlDoc = new XmlDocument();
+            xmlDoc.Load(rutaArchivo);
+            resultado = xmlDoc.SelectNodes($"//{etiquetaBuscada}")?.Count;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            resultado = null;
+        }
+    }
+}
