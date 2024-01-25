@@ -51,3 +51,7 @@ Tiene la opción de ser ejecutado en el navegador del cliente (Blazor WebAssembl
 •	Admite el enrutamiento, permitiendo la navegación entre diferentes componentes.
 •	Soporta el enlace bidireccional de datos, los componentes pueden enlazarse a controles de la interfaz de usuario y viceversa.
 •	Los estilos y clases CSS pueden aplicarse permitiendo una presentación visual flexible y consistente.
+Una de sus principales características es la utilización del lenguaje C#, dejando en segundo nivel a JavaScript, tanto para el código del lado del cliente como para el código del lado del servidor.
+Funciona en todos los navegadores modernos. Blazor corre en todos los navegadores modernos, incluyendo las aplicaciones de los navegadores en el teléfono.
+Permite a los desarrolladores compartir el código fácilmente. Como Blazor está dentro de ASP.NET y funciona gracias a .NET, es posible incluir cualquier librería de terceros en una aplicación construida con Blazor.
+Interacciona con JavaScript. Es posible llamar librerías y API escritas en JavaScript desde código escrito en C#.
