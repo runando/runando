@@ -1,0 +1,53 @@
+DIRECTIVAS DE BLAZOR
+	Las directivas son macros integrados que alteran el código c# que se genera a partir del archivo razor. Las directivas se utilizan precediendo el identificador con el @simbolo, siendo el identificador lo que normalmente esperaríamos que fuera el nombre de un atributo HTML o el nombre de la propiedad de un componente.
+Blazor no permite crear a los desarrolladores sus propias directivas.
+Algunas de las directivas estándar son:
+•	@code - identifica un bloque de código c#
+•	@page – genera una ruta de la pagina asociada al componente
+•	@layout – determina el diseño de la pagina
+•	@typeparam – indica una clase genérica
+•	@inject – define las dependencia que se deben inyectar
+•	@attribute – agrega el atributo DotNet especificado a la clase c# generada
+•	@ref – identifica una referencia a un miembro o una propiedad del componente
+•	@bind – especifica un enlace bidireccional entre la interfaz de usuario y una propiedad del componente
+•	@key – da la posibilidad de dar a los elementos un identificador único
+•	@on[event] – manejo de eventos de usuario
+•	@using – importar espacios de nombres especificos para su uso en ese componente
+•	@inherits – se utiliza para especificar la clase base de la cual el componente hereda. Puede ser útil para la herencia de componentes
+
+HOSPEDAJE DE BLAZOR
+Las aplicaciones Blazor se pueden hospedar de tres maneras:
+•	Blazor WebAssembly
+•	Blazor Server
+•	Blazor Hybrid
+
+Aplicaciones de Blazor WebAssembly
+Se ejecutan directamente en el navegador, es decir, del lado del cliente. Es un entorno de ejecución de .NET basado en WebAssembly. El entorno de ejecución de .NET se descarga con la aplicación junto con el ensamblado de la aplicación y las dependencias necesarias. No se necesitan complementos ni extensiones del explorador.
+No funciona en navegadores antiguos
+Recomendado para aplicaciones que necesitan alta seguridad, procesan muchos datos o utilicen muchos servicios externos.
+
+Aplicaciones Blazor Server
+Los componentes se ejecutan en el servidor en una aplicación ASP.NET Core. Los eventos de interfaz de usuario que se producen en el explorador se envían al servidor por medio de una conexión en tiempo real, por lo tanto se necesita una conexión activa con el cliente, y todo el estado de la interfaz de usuario se mantiene en el servidor.
+Funciona en navegadores antiguos.
+Recomendadas para tiendas, y marketplaces y aplicaciones en tiempo real como chats y transmisión de eventos.
+
+Aplicaciones Blazor Hybrid
+Son aplicaciones multiplataforma que se ejecuta con .NET MAUI, permite crear aplicaciones móviles híbridas que se ejecutan en iOS, Android y Windows, con la misma base de código. Combina las ventajas de Blazor WebAssembly y el desarrollo móvil nativo.
+Están diseñadas para aplicaciones multiplataforma.
+
+COMPONENTES BLAZOR CARACTERÍSTICAS TIPO ARCHIVO BLAZOR
+
+Las aplicaciones de Blazor  se basan en componentes. Un componente puede ser cualquier fragmento de la interfaz de usuario, una página completa, un formulario, un diálogo, …
+Las aplicaciones de Blazor se crean utilizando componentes que son flexibles, ligeros y pueden anidarse, reutilizarse y compartirse entre proyectos.
+Un componente es el elemento base de la aplicación Blazor, es decir, cada página se considera como un componente.
+Tiene la opción de ser ejecutado en el navegador del cliente (Blazor WebAssembly) o de ejecutarse en el servidor (Blazor Server).
+•	Reutilización, podemos referenciar la misma librería desde cliente y servidor.  Si utilizamos la versión en cliente, utilizamos el navegador para ejecutar la aplicación. Con lo que mucha carga de trabajo del servidor la delegamos en el cliente y ahorramos trabajo a nuestros servidores, pudiendo ser más livianos.
+•	La estructura de archivos tiene la extensión .razor y contiene código C# y HTML.
+•	Las directivas, como @code, @inject, permiten definir bloques de código, especificar la clase base de un componente, …
+•	Tienen un ciclo de vida que incluye eventos, y estos permiten ejecutar código en diferentes etapas.
+•	Pueden contener parámetro declarados mediante @param y propiedades con sintaxis similar a C#.
+•	Pueden definir y manejar eventos.
+•	Admite la inyección de dependencias
+•	Admite el enrutamiento, permitiendo la navegación entre diferentes componentes.
+•	Soporta el enlace bidireccional de datos, los componentes pueden enlazarse a controles de la interfaz de usuario y viceversa.
+•	Los estilos y clases CSS pueden aplicarse permitiendo una presentación visual flexible y consistente.
